@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smoothie Order Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Smoothie Order Form</h1>
+    <form id="smoothieForm">
+      <label for="smoothie">Smoothie:</label>
+      <select id="smoothie" name="smoothie">
+        <option value="strawberry">Strawberry Smoothie</option>
+        <option value="banana">Banana Smoothie</option>
+        <option value="mango">Mango Smoothie</option>
+        <!-- Add more smoothie options as needed -->
+      </select>
+      <br>
+
+      <label>Size:</label><br>
+      <input type="radio" id="small" name="size" value="Small">
+      <label for="small">Small</label><br>
+      <input type="radio" id="medium" name="size" value="Medium">
+      <label for="medium">Medium</label><br>
+      <input type="radio" id="large" name="size" value="Large">
+      <label for="large">Large</label>
+      <br>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" min="1" value="1">
+      <br>
+
+      <label>Top Ups:</label><br>
+      <input type="checkbox" id="protein" name="topup" value="protein">
+      <label for="protein">Protein (+$2)</label><br>
+      <input type="checkbox" id="greens" name="topup" value="greens">
+      <label for="greens">Greens (+$1.5)</label><br>
+      <!-- Add more top-up options as needed -->
+
+      <br>
+      <button type="button" id="orderButton">Place Order</button>
+    </form>
+
+    <div id="invoice" class="hidden">
+      <h2>Invoice:</h2>
+      <p id="greeting"></p>
+      <div class="smoothie-description">
+        
+        <p id="description"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
